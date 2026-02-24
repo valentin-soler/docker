@@ -6,4 +6,4 @@ Nous allons maintenant installer Docker CLI sur notre machine
 
 Avant d'ajouter les paquets qui viennent directement de Docker, nous devons supprimer ceux de Debian en premier
 
-~~~ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc podman-docker containerd runc | cut -f1)
+``` sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc podman-docker containerd runc | cut -f1) ```

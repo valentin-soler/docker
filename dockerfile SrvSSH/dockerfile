@@ -1,0 +1,9 @@
+FROM debian:latest
+
+RUN apt update && apt install -y openssh-server
+RUN echo "root:root123" | chpasswd
+RUN sed -i -E 's/^#?(PermitRootLogin)[[:space:]].*/\1 yes/' /etc/ssh/sshd_config
+
+EXPOSE 22
+
+CMD [ "/usr/sbin/sshd", "-D" ]
